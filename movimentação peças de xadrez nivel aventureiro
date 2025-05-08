@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    printf("=== SIMULACAO DO MOVIMENTO DO CAVALO NO XADREZ ===\n\n");
+    
+    /* 
+     * Movimento do Cavalo em L: 
+     * 2 casas para baixo e 1 casa para a esquerda
+     * Usando loops aninhados (for + while)
+     */
+    
+    // Variáveis para controlar os movimentos
+    const int MOVIMENTOS_PARA_BAIXO = 2;  // Primeira parte do L
+    const int MOVIMENTOS_LATERAIS = 1;     // Segunda parte do L
+    
+    printf("Movimento do Cavalo (2 casas para baixo e 1 para esquerda):\n");
+    
+    // Loop externo (for) para o movimento vertical (2 casas para baixo)
+    for (int movimento_vertical = 1; movimento_vertical <= MOVIMENTOS_PARA_BAIXO; movimento_vertical++) {
+        printf("Baixo\n");  // Imprime cada movimento para baixo
+        
+        // Loop interno (while) para o movimento horizontal (1 casa para esquerda)
+        // Executa apenas após completar os movimentos verticais
+        if (movimento_vertical == MOVIMENTOS_PARA_BAIXO) {
+            int movimento_horizontal = 0;
+            while (movimento_horizontal < MOVIMENTOS_LATERAIS) {
+                printf("Esquerda\n");  // Movimento lateral para completar o L
+                movimento_horizontal++;
+            }
+        }
+    }
+    
+    return 0;
+}
