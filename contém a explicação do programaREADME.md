@@ -16,7 +16,7 @@ Copie o código para um arquivo xadrez.c
 Compile com: gcc xadrez.c -o xadrez
 Execute com: ./xadrez
 
-Nível aventureiro:
+# Nível aventureiro:
 
 Explicação do Código:
 Estrutura do Programa:Foca exclusivamente no movimento do cavalo, utiliza constantes para definir a quantidade de movimentos, implementa loops aninhados conforme exigido.
@@ -29,3 +29,24 @@ O movimento lateral só ocorre após completar os movimentos verticais.
 Atendimento aos Requisitos:
 Uso obrigatório de um for e um while aninhados.
 Variáveis descritivas e constantes para valores fixos.
+
+# Explicação do Funcionamento nível avançado:
+1. Recursividade (Torre, Bispo e Rainha)
+Cada peça tem sua própria função recursiva, a função chama a si mesma até atingir a condição de parada (casas <= 0).
+
+Exemplo para Torre:
+2. Loops Complexos para o Cavalo
+Usa dois loops for aninhados:
+Loop externo controla 2 movimentos verticais ("Cima").
+Loop interno controla 1 movimento horizontal ("Direita").
+O movimento horizontal só ocorre após completar os verticais.
+
+3. Bispo com Loops Aninhados
+Implementação alternativa com loops:.
+Loop externo para controle vertical (5 iterações).
+Loop interno para controle horizontal (1 iteração por movimento diagonal).
+
+Como Executar
+Copie o código para um arquivo xadrez_avancado.c
+Compile com: gcc xadrez_avancado.c -o xadrez
+Execute com: ./xadrez
